@@ -11,8 +11,9 @@
     <div class='user_info'>
       <a class='dark reply_author' href="/user/<%= reply.author.loginname %>"><%= reply.author.loginname %>
       </a>
-      <a class="reply_time" href="#<%= reply._id %>"><%= indexInCollection + 1 %> Floor •<%= reply.friendly_create_at
-        %></a>
+      <a class="reply_time" href="#<%= reply._id %>">
+	  <%= reply.friendly_create_at%>&nbsp;#<%= indexInCollection + 1 %>
+	  </a>
     </div>
     <div class='user_action'>
       <span>

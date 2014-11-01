@@ -1,7 +1,7 @@
 ﻿
 var bcrypt = require('bcrypt-nodejs');
 var moment = require('moment');
-moment.locale('zh-cn'); //  Use Chinese 
+moment.locale('en-us'); //  Use Chinese 
 
 //  Formatting time 
 exports.formatDate = function (date, friendly) {
