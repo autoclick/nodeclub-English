@@ -1,0 +1,38 @@
+﻿<%- partial('../sign/sidebar') %>
+
+<div id='content'>
+  <div class='panel'>
+    <div class='header'>
+      <ul class='breadcrumb'>
+        <li><a href='/'> Home </a><span class='divider'>/</span></li>
+        <li class='active'> Forgot Password </li>
+      </ul>
+    </div>
+    <div class='inner'>
+      <% if (typeof(error) !== 'undefined' && error) { %>
+      <div class="alert alert-error">
+        <a class="close" data-dismiss="alert" href="#">&times;</a>
+        <strong><%= error %></strong>
+      </div>
+      <% } %>
+      <form id='search_pass_form' class='form-horizontal' action='/search_pass' method='post'>
+        <div class='control-group'>
+          <label class='control-label' for='email'> E-mail </label>
+
+          <div class='controls'>
+            <% if (typeof(email) !== 'undefined') { %>
+            <input class='input-xlarge' id='email' name='email' size='30' type='text' value='<%= email %>'/>
+            <% } else { %>
+            <input class='input-xlarge' id='email' name='email' size='30' type='text'/>
+            <% } %>
+            <p class='help-block'> Please enter your account when you register to use  E-mail </p>
+          </div>
+          <input type='hidden' name='_csrf' value='<%= csrf %>'/>
+        </div>
+        <div class='form-actions'>
+          <input type='submit' class='span-primary' value=' Submit '/>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

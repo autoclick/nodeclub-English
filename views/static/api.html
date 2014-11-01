@@ -1,0 +1,39 @@
+﻿<div id='content'>
+  <div class='panel'>
+    <div class='header'>
+      <ul class='breadcrumb'>
+        <li><a href='/'> Home </a><span class='divider'>/</span></li>
+        <li class='active'>API</li>
+      </ul>
+    </div>
+    <div class='inner topic'>
+      <div class="topic_content">
+        <%- markdown(multiline(function () {
+/*
+###  Theme 
+
+#### /topics  Theme  Home 
+
+ Receive  get  Parameters 
+
+* page Number  Pages 
+* tab String  Theme  Classification 
+
+ Examples ：[/api/v1/topics](/api/v1/topics)
+
+#### /topic/:id  Theme  Detail 
+
+ Examples ：[/api/v1/topic/5433d5e4e737cbe96dcef312](/api/v1/topic/5433d5e4e737cbe96dcef312)
+
+###  User 
+
+#### /user/:loginname  User  Detail 
+
+ Examples ：[/api/v1/user/alsotang](/api/v1/user/alsotang)
+
+*/
+        })) %>
+      </div>
+    </div>
+  </div>
+</div>
